@@ -1,0 +1,52 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="300" height="300">
+</canvas>
+<script>
+function draw() {
+	var sketch = document.getElementById('sketch');
+
+	var context = sketch.getContext("2d");
+	// draw stuff here!
+var x = prompt ("Enter a Radius")
+var c = prompt ("Enter a color")
+var number = parseInt (x,10);
+if (c =="red"){
+
+	context.fillStyle = "#ff0000"
+	context.beginPath();
+context.arc(150, 150, x, 0, 2 * Math.PI, true);
+context.closePath();
+context.fill();
+} 
+if (c =="blue") {
+context.fillStyle = "#00ff00"
+context.beginPath();
+context.arc(150, 150, x, 0, 2 * Math.PI, true);
+context.closePath();
+context.fill();
+}
+if (c = "green"){
+context.fillStyle = "#0000ff"
+
+context.beginPath();
+context.arc(150, 150, x, 0, 2 * Math.PI, true);
+context.closePath();
+context.fill();
+}
+else {
+	context.fillStyle = "#000000"
+	
+	context.beginPath();
+context.arc(150, 150, x, 0, 2 * Math.PI, true);
+context.closePath();
+context.fill();
+}
+
+}
+</script>
+</body>
+</html>
