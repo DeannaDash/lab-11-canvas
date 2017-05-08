@@ -1,0 +1,42 @@
+ 
+<html>
+<head>
+	<title></title>
+</head>
+<body onload="draw()">
+<canvas id="sketch" width="800" height="800">
+</canvas>
+<script>
+function draw() {
+	var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+	// draw stuff here!
+
+var x = 800/8;
+var y = 800/8;
+var sketch = document.getElementById('sketch');
+	var context = sketch.getContext("2d");
+
+var blackwhite = 1;
+for(var i= 0; i < 8; i ++){
+if(blackwhite == 1){
+	blackwhite =0
+}
+else {
+	blackwhite = 1;
+}
+for (var j = 0; j < 8; j ++){
+	if (blackwhite ==1 ){
+		context.fillStyle = "#ffffff";
+		blackwhite = 0;
+	}else{
+		context.fillStyle ="#000000";
+		blackwhite =1;
+	}
+	context.fillRect((i * x) ,(j * y) ,100,100)
+}
+}
+ }
+ </script>
+</body>
+</html>
